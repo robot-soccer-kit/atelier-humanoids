@@ -169,81 +169,20 @@ Remarque: pour placer un robot à une distance $d$ d'une balle, avec une orienta
 
 Pour orientation de 45°, le signe du dégagement en $y$ est inversé.
 
-### 3. Tir vers les but de manière continue (selon une infinité de couloirs)
+### 3. BONUS: Tir vers les but selon n'importe quelle orientation
 
-Notre robot peut maintenant tirer selon 3 couloirs.
-Mais pourquoi se limiter à 3 couloirs, on pourrait le faire tirer selon n'importe quelle orientation.
+Au lieu de se limiter à 3 couloirs, on souhaiterait que le robot tire vers les cages, peu importe son orientation.
 
-Pour cela, nous allons implémenter l'orientation de manière continue.
+Pour cela, nous allons calculer l'orientation du robot par rapport à la position de la balle et des cages.
 
-Où que soit le robot sur le terrain, nous allons le faire tirer vers le milieu des cages.
+**Exercice: modifiez le code de l'attaquant de manière à ce que le robot tire vers les cages, peu importe son orientation**
 
-Pour se faire, un peu de trigonométrie nous donne :
+Note:
 
-$orientation = arctan(\frac{(y_{but} - y_{balle})}{(x_{but} - x_{balle})})$
+* Les fonctions trigonométriques `math.cos`, `math.sin`, `math.acos`, `math.asin` et `math.atan` sont disponibles dans la bibliothèque `math`.
 
-Ne reste alors qu'à implémenter cela.
+### 4. BONUS: Éviter les collisions avec la balle
 
-1. Compléter le code ci-dessous
+Dans le cas où la balle se trouve sur la trajectoire du robot, il risque de la percuter et de la déplacer en essayant de se placer pour tirer.
 
-```python
-import numpy as np
-import math
-import rsk
-from rsk import constants
-
-client = rsk.Client() #Crée un client Robot Soccer Kit, contenant nombre de variables utiles 
-
-while(1):#Boucle infinie permettant d'actualiser l'ordre demandé    
-    #Position du milieu des buts [constants.field_length/2 ; 0.0]
-    #La fonction arctan est disponible dans la bibliothèque math, en utilisant la fonction math.atan()
-
-    orientation = math.atan(...)
-    client.blue1.goto((client.ball[0]-constants.robot_radius*math.cos(orientation), client.ball[1]-constants.robot_radius*math.sin(orientation), orientation))#Déplace le robot derrière la balle, orienté à orientation°
-    client.blue1.kick() #Tire
-```
-
-### Conclusion Partie Attaquant
-
-Nous avons donc maintenant un attaquant capable de tirer selon une infinité d'angles.
-
-Des problèmes persistent néanmoins :
-
-- L'attaquant tire toujours au milieu des cages, la défense est donc aisé, un plot placé au milieu des cages suffirait pour défendre.
-- Le robot n'évite pas la balle lorsqu'il se place, et peut potentiellement la déplacer par inadvertance.
-
-Nous pourrions également programmer des stratégies permettant de faire des passes afin de déstabiliser l'équipe adverse.
-
-Ces problématiques ne sont pas dans le cadre de cet atelier, mais pourront être adressées par les plus dévoués.
-
-## Conclusion
-
-Nous avons donc programmé les RSK de manière à avoir un attaquant bleu et un défenseur vert.
-
-En modifiant légèrement le code, nous pourrions avoir une équipe composé d'un attaquant et d'un défenseur et faire des matchs.
-
-De nombreuses problématiques n'ont pas été résolues lors de cet atelier, dont le but était l'introduction à RSK, et sont laissées en exercice à ceux qui le veulent.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+**Exercice: modifiez le code de l'attaquant de manière à ce qu'il évite les collisions avec la balle**
