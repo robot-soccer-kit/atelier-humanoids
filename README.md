@@ -337,5 +337,5 @@ Modifiez le code de l'attaquant de manière à ce qu'il évite les collisions av
 À vous de jouer dans la cours des grand 🩻 !
 </span>
 <p style="font-style: italic; color:white;">
-Modifiez le code de l'attaquant de manière à ce qu'il évite les collisions avec la balle
+Il est temps de rassembler tout ce que vous avez appris pour faire un programme prêt à affronter un adversaire. Les terrains n’attendent que vous !
 </blockquote>
