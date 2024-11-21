@@ -18,5 +18,5 @@ while True:
     orientation = math.radians(-90)
 
     # La fonction goto permet de déplacer le robot vers des
-    # coordonnées (x, y, alpha)
+    # coordonnées (x, y, orientation)
     client.green1.goto((x, y, orientation))

@@ -12,7 +12,6 @@ while True:
     balle_x = client.ball[0]
     balle_y = client.ball[1]
 
-    # Définition de la position cible du robot
     if balle_x > 0:
         # Si la balle est à une position x positive,
         # on se place à la même position x que la balle
@@ -24,5 +23,5 @@ while True:
     orientation = math.radians(-90)
 
     # La fonction goto permet de déplacer le robot vers des
-    # coordonnées (x, y, alpha)
+    # coordonnées (x, y, orientation)
     client.green1.goto((x, y, orientation))
