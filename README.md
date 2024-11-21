@@ -34,7 +34,6 @@ Vous vous trouvez actuellement dans **Visual Studio Code**, un éditeur de texte
 
 Pour créer un nouveau fichier, il suffit de faire un clic droit dans la zone à gauche, sur le dossier Code, et de cliquer sur `New File...`, puis d'entrer le nom du fichier, avec l'extension `.py`, car nous programmons ici en Python.
 
-![New file]()
 
 <video src="./video/creation_fichier.mp4" style="max-width: 50%; align-items: center" autoplay muted loop></video>
 
@@ -47,9 +46,13 @@ Pour lancer un programme, cliquer sur le bouton suivant:
 
 ![Play](./img/play.png)
 
+
+
 Une fenêtre de terminal apparaît alors en bas de l'écran.
 
-![Ecran](./img/ecran.png)
+
+<img src="./img/ecran.png" style="max-width: 100%; align-items: center">
+
 
 ### ⏹️ Arrêter un programme
 
