@@ -13,8 +13,10 @@ Pour lancer le simulateur, cliquez sur l'icône <img src="./img/RSK_simu.ico" wi
 
 Cela ouvrira une fenêtre de simulation dans un navigateur avec un terrain de football, quatre robots, une balle ainsi que l'interface d'arbitrage telle que présentée ci-dessous:
 
-![Simulation Interface](./img/referee.png)
 
+<img src="./img/referee.png" style="max-width: 80%; align-items: center">
+
+<br>
 <blockquote style="border-left: 5px solid yellow; padding-bottom:1px"><span style='font-size:20px;'>❕ </span>
 <span style="font-weight: bold; color:yellow;">
 Astuce
@@ -32,7 +34,10 @@ Vous vous trouvez actuellement dans **Visual Studio Code**, un éditeur de texte
 
 Pour créer un nouveau fichier, il suffit de faire un clic droit dans la zone à gauche, sur le dossier Code, et de cliquer sur `New File...`, puis d'entrer le nom du fichier, avec l'extension `.py`, car nous programmons ici en Python.
 
-![New file](./img/new_file.png)
+![New file]()
+
+<video src="./video/creation_fichier.mp4" style="max-width: 50%; align-items: center" autoplay muted loop></video>
+
 
 Si la zone n'apparait pas, cliquer sur l'icone : <img src="./img/explorer.png" width="35">
 
@@ -51,7 +56,7 @@ Une fenêtre de terminal apparaît alors en bas de l'écran.
 Enfin pour couper un programme, cliquer sur la petite poubelle (entourée en rouge ci-dessous) dans la partie terminal
 
 
-<img src="./img/poubelle.png" style="max-width: 80%; align-items: center">
+<img src="./img/poubelle.png" style="max-width: 100%; align-items: center">
 
 ## Système de coordonnées
 
@@ -283,7 +288,7 @@ Remarque: pour placer un robot à une distance $d$ d'une balle, avec une orienta
 Pour orientation de 45°, le signe du dégagement en $y$ est inversé.
 </blockquote>
 
-### 2.3 🌟 BONUS: Tir vers les but selon n'importe quelle orientation
+### 2.3 🌟 BONUS : Tir vers les but selon n'importe quelle orientation
 
 Au lieu de se limiter à 3 couloirs, on souhaiterait que le robot tire vers les cages, peu importe son orientation.
 
@@ -307,7 +312,7 @@ Astuce
 Les fonctions trigonométriques `math.cos`, `math.sin`, `math.acos`, `math.asin` et `math.atan` sont disponibles dans la bibliothèque `math`.
 </blockquote>
 
-### 2.4 🌟 BONUS: Éviter les collisions avec la balle
+### 2.4 🌟 BONUS : Éviter les collisions avec la balle
 
 Dans le cas où la balle se trouve sur la trajectoire du robot, il risque de la percuter et de la déplacer en essayant de se placer pour tirer.
 
@@ -321,6 +326,13 @@ Modifiez le code de l'attaquant de manière à ce qu'il évite les collisions av
 </blockquote>
 
 
-## 3. Troisième défis: c’est l’heure du match !
+## 3. C'est l’heure du match !
 
-Il est temps de rassembler tout ce que vous avez appris pour faire un programme prêt à affronter un adversaire. Les terrains n’attendent que vous !
+<blockquote style="border-left: 5px solid red; padding-bottom:1px">
+<span style='font-size:20px;'>🎮 </span>
+<span style="font-weight: bold; color:red;">
+À vous de jouer dans la cours des grand 🩻 !
+</span>
+<p style="font-style: italic; color:white;">
+Modifiez le code de l'attaquant de manière à ce qu'il évite les collisions avec la balle
+</blockquote>
